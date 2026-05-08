@@ -4,6 +4,7 @@ import About from '../components/About';
 import Services from '../components/Services';
 import Portfolio from '../components/Portfolio';
 import Contact from '../components/Contact';
+import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
 
 export default function HomePage() {
@@ -15,6 +16,7 @@ export default function HomePage() {
       <Services />
       <Portfolio />
       <Contact />
+      <FAQ />
       <Footer />
     </div>
   );

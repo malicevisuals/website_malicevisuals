@@ -12,5 +12,13 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Hidden form for Netlify Form detection -->
+    <form name="contact" data-netlify="true" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="band_name" />
+      <textarea name="message"></textarea>
+    </form>
   </body>
 </html>

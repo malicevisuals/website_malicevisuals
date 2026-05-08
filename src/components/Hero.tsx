@@ -1,5 +1,5 @@
-import { useRef } from 'react';
-import { useScrollProgress } from '../hooks/useScrollProgress';
+import { useRef } from "react";
+import { useScrollProgress } from "../hooks/useScrollProgress";
 
 export default function Hero() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -10,17 +10,22 @@ export default function Hero() {
   const indicatorOpacity = Math.max(0, 1 - progress * 4);
 
   return (
-    <div ref={heroRef} style={{ height: '220vh' }} id="hero">
+    <div ref={heroRef} style={{ height: "220vh" }} id="hero">
       <div className="sticky top-0 h-screen overflow-hidden">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src="/assets/showreel.mp4" type="video/mp4" />
-        </video>
+        <img
+          src="giphy.gif"
+          className="w-screen h-screen object-cover grayscale brightness-50 contrast-150"
+          alt=""
+        />
+        {/* <video */}
+        {/*   autoPlay */}
+        {/*   muted */}
+        {/*   loop */}
+        {/*   playsInline */}
+        {/*   className="absolute inset-0 w-full h-full object-cover" */}
+        {/* > */}
+        {/*   <source src="/assets/showreel.mp4" type="video/mp4" /> */}
+        {/* </video> */}
 
         <div className="absolute inset-0 bg-black/50" />
 
@@ -29,7 +34,7 @@ export default function Hero() {
           style={{
             opacity: brandingOpacity,
             transform: `scale(${brandingScale})`,
-            transition: 'none',
+            transition: "none",
           }}
         >
           <img
@@ -39,13 +44,13 @@ export default function Hero() {
           />
           <h1
             className="text-4xl md:text-6xl lg:text-7xl font-black text-off-white text-center leading-none"
-            style={{ letterSpacing: '0.18em' }}
+            style={{ letterSpacing: "0.18em" }}
           >
             UNRELENTING VISUALS.
           </h1>
           <h2
             className="mt-4 text-lg md:text-2xl lg:text-3xl font-semibold text-center"
-            style={{ color: '#8B0000', letterSpacing: '0.3em' }}
+            style={{ color: "#8B0000", letterSpacing: "0.3em" }}
           >
             FUELED BY MALICE.
           </h2>
@@ -57,7 +62,7 @@ export default function Hero() {
         >
           <span
             className="text-off-white/50 text-xs font-medium"
-            style={{ letterSpacing: '0.35em' }}
+            style={{ letterSpacing: "0.35em" }}
           >
             SCROLL
           </span>
