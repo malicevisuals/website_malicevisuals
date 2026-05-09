@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const LINKS = [
   { label: 'ABOUT', href: '#about' },
@@ -33,14 +34,13 @@ export default function Nav() {
       }}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-5 flex items-center justify-between">
-        <a
-          href="#hero"
-          onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+        <Link
+          to="/"
           className="text-off-white font-black text-sm"
           style={{ letterSpacing: '0.3em' }}
         >
           MALICE<span className="text-blood-red">VISUALS</span>
-        </a>
+        </Link>
 
         <div className="hidden md:flex items-center gap-10">
           {LINKS.map((link) => (
