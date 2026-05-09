@@ -1,16 +1,18 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const LINKS = [
-  { label: 'ABOUT', href: '#about' },
-  { label: 'SERVICES', href: '#services' },
-  { label: 'WORK', href: '#portfolio' },
-  { label: 'CONTACT', href: '#contact' },
+  { label: 'ABOUT', href: '#about', id: 'about' },
+  { label: 'SERVICES', href: '#services', id: 'services' },
+  { label: 'WORK', href: '#portfolio', id: 'portfolio' },
+  { label: 'CONTACT', href: '#contact', id: 'contact' },
 ];
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -18,10 +20,19 @@ export default function Nav() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const handleNavClick = (href: string) => {
+  const handleNavClick = (id: string) => {
     setMenuOpen(false);
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
+
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const el = document.querySelector(`#${id}`);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else {
+      const el = document.querySelector(`#${id}`);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -46,7 +57,7 @@ export default function Nav() {
           {LINKS.map((link) => (
             <button
               key={link.label}
-              onClick={() => handleNavClick(link.href)}
+              onClick={() => handleNavClick(link.id)}
               className="text-off-white/50 hover:text-off-white text-xs font-semibold transition-colors duration-200 relative group"
               style={{ letterSpacing: '0.25em' }}
             >
@@ -77,7 +88,7 @@ export default function Nav() {
           {LINKS.map((link) => (
             <button
               key={link.label}
-              onClick={() => handleNavClick(link.href)}
+              onClick={() => handleNavClick(link.id)}
               className="text-off-white/70 hover:text-blood-red text-sm font-semibold text-left transition-colors"
               style={{ letterSpacing: '0.25em' }}
             >
