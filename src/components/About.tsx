@@ -64,7 +64,7 @@ export default function About() {
               style={{ aspectRatio: "3/4" }}
             >
               <img
-                src="/src/assets/Me_with_Camera.jpg"
+                src="/Me_with_Camera.jpg"
                 alt="Pascal Klebe Klebe — Cinematographer"
                 className="w-full h-full object-cover"
               />

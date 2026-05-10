@@ -1,9 +1,11 @@
 import { useRef } from "react";
 import { useScrollProgress } from "../hooks/useScrollProgress";
+import { usePrefersReducedMotion } from "../hooks/usePrefersReducedMotion";
 
 export default function Hero() {
   const heroRef = useRef<HTMLDivElement>(null);
   const progress = useScrollProgress(heroRef);
+  const prefersReducedMotion = usePrefersReducedMotion();
 
   const brandingOpacity = Math.max(0, Math.min(1, (progress - 0.25) / 0.45));
   const brandingScale = 0.92 + brandingOpacity * 0.08;
@@ -12,20 +14,20 @@ export default function Hero() {
   return (
     <div ref={heroRef} style={{ height: "220vh" }} id="hero">
       <div className="sticky top-0 h-screen overflow-hidden">
-        <img
-          src="giphy.gif"
-          className="w-screen h-screen object-cover grayscale brightness-50 contrast-150"
-          alt=""
-        />
-        {/* <video */}
-        {/*   autoPlay */}
-        {/*   muted */}
-        {/*   loop */}
-        {/*   playsInline */}
-        {/*   className="absolute inset-0 w-full h-full object-cover" */}
-        {/* > */}
-        {/*   <source src="/assets/showreel.mp4" type="video/mp4" /> */}
-        {/* </video> */}
+        <video
+          autoPlay={!prefersReducedMotion}
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-screen h-screen object-cover"
+          poster="/videos/PLACEHOLDERS/Start.jpg"
+        >
+          <source
+            src="/videos/AV1/Start.av1.mp4"
+            type="video/mp4; codecs=av01.0.08M.08"
+          />
+          <source src="/videos/WEBM/Start.webm" type="video/webm" />
+        </video>
 
         <div className="absolute inset-0 bg-black/50" />
 
