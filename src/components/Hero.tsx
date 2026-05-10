@@ -29,7 +29,10 @@ export default function Hero() {
           <source src="/videos/WEBM/Start.webm" type="video/webm" />
         </video>
 
-        <div className="absolute inset-0 bg-black/50" />
+        <div
+          className="absolute inset-0 bg-black/70"
+          style={{ opacity: 1 - indicatorOpacity }}
+        />
 
         <div
           className="absolute inset-0 flex flex-col items-center justify-center px-8"

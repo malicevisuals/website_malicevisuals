@@ -40,8 +40,8 @@ function ServiceItem({
         style={{ aspectRatio: "3/4" }}
       >
         <div
-          className={`w-full h-full flex items-center justify-center relative overflow-hidden grayscale opacity-50 duration-700 ease-in-out transition-all hover:grayscale-0 hover:opacity-100 ${
-            isFocused ? "grayscale-0 opacity-100" : ""
+          className={`w-full h-full flex items-center justify-center relative overflow-hidden grayscale opacity-50 duration-700 ease-in-out transition-all md:hover:grayscale-0 md:hover:opacity-100 ${
+            isFocused ? "max-md:grayscale-0 max-md:opacity-100" : ""
           }`}
         >
           <div className="absolute inset-0">
