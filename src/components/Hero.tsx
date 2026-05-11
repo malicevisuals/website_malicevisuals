@@ -30,7 +30,7 @@ export default function Hero() {
         </video>
 
         <div
-          className="absolute inset-0 bg-black/70"
+          className="absolute inset-0 bg-black/70 pointer-events-none"
           style={{ opacity: 1 - indicatorOpacity }}
         />
 
