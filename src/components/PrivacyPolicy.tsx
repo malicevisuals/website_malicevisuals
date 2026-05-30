@@ -41,7 +41,7 @@ export default function PrivacyPolicy() {
                 <div>
                   <h3 className="text-base font-semibold text-off-white/90 mb-2">Contact Form Data</h3>
                   <p className="text-base leading-relaxed font-light">
-                    When you submit the contact form, we collect your name, email address, and message. This information is used solely to respond to your inquiry and is not shared with third parties.
+                    When you submit the contact form, we collect your name, email address, band/project name, and message. This information is used solely to respond to your inquiry and is stored securely.
                   </p>
                 </div>
                 <div>
@@ -66,13 +66,34 @@ export default function PrivacyPolicy() {
               <h2 className="text-lg font-semibold text-off-white mb-4" style={{ letterSpacing: '0.08em' }}>
                 4. THIRD-PARTY SERVICES
               </h2>
-              <p className="text-base leading-relaxed font-light">
-                We use YouTube for video embedding. YouTube is operated by Google and subject to Google's privacy policy. YouTube may collect usage data when you interact with embedded videos. You can learn more at{' '}
-                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-blood-red hover:text-blood-red/80">
-                  Google's Privacy Policy
-                </a>
-                .
-              </p>
+              <div className="space-y-4">
+                <div>
+                  <h3 className="text-base font-semibold text-off-white/90 mb-2">YouTube</h3>
+                  <p className="text-base leading-relaxed font-light">
+                    We use YouTube for video embedding. YouTube is operated by Google and subject to Google's privacy policy. YouTube may collect usage data when you interact with embedded videos. You can learn more at{' '}
+                    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-blood-red hover:text-blood-red/80">
+                      Google's Privacy Policy
+                    </a>
+                    .
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-base font-semibold text-off-white/90 mb-2">Netlify Forms</h3>
+                  <p className="text-base leading-relaxed font-light">
+                    We use Netlify Forms to process contact form submissions. Netlify processes form data on our behalf to deliver your messages to us. The data collected includes: name, email address, band/project name, and message content.
+                  </p>
+                  <p className="text-base leading-relaxed font-light mt-3">
+                    <strong className="text-off-white">Legal Basis:</strong> Processing is based on your explicit consent when you submit the contact form. Form submissions are stored securely by Netlify and are only accessible to us for the purpose of responding to your inquiry.
+                  </p>
+                  <p className="text-base leading-relaxed font-light mt-3">
+                    For more information about how Netlify processes data, please visit{' '}
+                    <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener noreferrer" className="text-blood-red hover:text-blood-red/80">
+                      Netlify's Privacy Policy
+                    </a>
+                    .
+                  </p>
+                </div>
+              </div>
             </section>
 
             <section>

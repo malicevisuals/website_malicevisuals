@@ -33,9 +33,9 @@ export default function Impressum() {
               </h2>
               <div className="space-y-2 text-base leading-relaxed font-light">
                 <p>Pascal Klebe</p>
-                <p>MALICEVISUALS</p>
-                <p>[Your Address]</p>
-                <p>[Your City]</p>
+                <p>Kreuznacher Str. 40</p>
+                <p>60486, Frankfurt am Main</p>
+                <p>DE</p>
               </div>
             </section>
 
@@ -47,8 +47,8 @@ export default function Impressum() {
                 CONTACT INFORMATION
               </h2>
               <div className="space-y-2 text-base leading-relaxed font-light">
-                <p>Email: [your-email@example.com]</p>
-                <p>Phone: [Your Phone Number]</p>
+                <p>Email: malicevisuals@gmail.com</p>
+                <p>Phone: +49 176 42 92 11 41</p>
               </div>
             </section>
 

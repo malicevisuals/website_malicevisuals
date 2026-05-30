@@ -1,10 +1,11 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Send } from "lucide-react";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
 export default function Contact() {
   const sectionRef = useRef<HTMLElement>(null);
   const isVisible = useIntersectionObserver(sectionRef);
+  const [consentChecked, setConsentChecked] = useState(false);
 
   const inputClass =
     "w-full bg-dark-input border border-white/10 text-off-white placeholder-white/25 px-5 py-4 text-sm font-light outline-none transition-all duration-300 focus:border-blood-red focus:bg-black";
@@ -82,9 +83,27 @@ export default function Contact() {
               style={{ letterSpacing: "0.05em" }}
             />
 
+            <label className="flex items-start gap-3 py-4 px-5 bg-dark-input border border-white/10 cursor-pointer">
+              <input
+                type="checkbox"
+                name="consent"
+                checked={consentChecked}
+                onChange={(e) => setConsentChecked(e.target.checked)}
+                className="mt-1 w-4 h-4 border border-white/30 bg-black text-blood-red focus:ring-blood-red focus:ring-offset-0 cursor-pointer"
+              />
+              <span className="text-off-white/60 text-xs font-light leading-relaxed">
+                I consent to the processing of my personal data (name, email, message) for the purpose of handling my inquiry. I have read and agree to the{' '}
+                <a href="/privacy-policy" className="text-blood-red hover:text-blood-red/80 underline">
+                  Privacy Policy
+                </a>
+                .
+              </span>
+            </label>
+
             <button
               type="submit"
-              className="mt-1 bg-blood-red hover:bg-blood-red-hover text-white font-bold py-5 px-8 flex items-center justify-center gap-3 transition-colors duration-300"
+              disabled={!consentChecked}
+              className="mt-1 bg-blood-red hover:bg-blood-red-hover text-white font-bold py-5 px-8 flex items-center justify-center gap-3 transition-colors duration-300 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-blood-red"
               style={{ letterSpacing: "0.25em" }}
             >
               <span>SUBMIT YOUR VISION</span>
