@@ -13,6 +13,9 @@ const VIDEOS = [
   { id: 'BjW4RshNums' },
   { id: 'eUbFDdvX5A8' },
   { id: 'ybuSApL7riQ' },
+  { id: 'JMwLzGqYHFg' },
+  { id: 'uzogo_rLnqs' },
+  { id: 'Bd1sYeyT4P0' },
 ];
 
 interface ThumbnailCardProps {
