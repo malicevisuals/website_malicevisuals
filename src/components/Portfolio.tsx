@@ -10,6 +10,9 @@ const VIDEOS = [
   { id: 'u6RGNXrejAY' },
   { id: 'wZO9ItZ-8uM' },
   { id: 'CYFQ6TGqaik' },
+  { id: 'BjW4RshNums' },
+  { id: 'eUbFDdvX5A8' },
+  { id: 'ybuSApL7riQ' },
 ];
 
 interface ThumbnailCardProps {
