@@ -3,6 +3,7 @@ import Hero from '../components/Hero';
 import About from '../components/About';
 import Services from '../components/Services';
 import Portfolio from '../components/Portfolio';
+import LatestWork from '../components/LatestWork';
 import Contact from '../components/Contact';
 import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
@@ -15,6 +16,7 @@ export default function HomePage() {
       <About />
       <Services />
       <Portfolio />
+      <LatestWork />
       <Contact />
       <FAQ />
       <Footer />

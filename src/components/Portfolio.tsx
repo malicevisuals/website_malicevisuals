@@ -24,7 +24,7 @@ interface ThumbnailCardProps {
   onPlay: (id: string) => void;
 }
 
-function ThumbnailCard({ videoId, index, onPlay }: ThumbnailCardProps) {
+export function ThumbnailCard({ videoId, index, onPlay }: ThumbnailCardProps) {
   const ref = useRef<HTMLDivElement>(null);
   const isVisible = useIntersectionObserver(ref);
   const [hovered, setHovered] = useState(false);
