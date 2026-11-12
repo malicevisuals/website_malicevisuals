@@ -33,6 +33,9 @@ export default function LatestWork() {
         >
           NEWS:
         </h2>
+        <p className="text-off-white/70 text-base md:text-lg leading-relaxed max-w-2xl mt-8">
+          The official video for ACCVSED's new single "1981", directed by Pascal Klebe. Press play to watch the full video.
+        </p>
       </div>
 
       <div className="max-w-7xl mx-auto">
